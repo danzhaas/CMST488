@@ -2,7 +2,7 @@ name: Deploy HTML Files to AppService - CMST488
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build-and-deploy:
     runs-on: windows-latest
