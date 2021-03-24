@@ -12,5 +12,5 @@ jobs:
       uses: azure/webapps-deploy@v1
       with:
         app-name: 'cmst488-dhaas2'
-         slot-name: 'production'
+        slot-name: 'production'
         publish-profile: ${{ secrets.AppServiceCMST488 }}
