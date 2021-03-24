@@ -1,0 +1,16 @@
+name: Deploy HTML Files to AppService - CMST488
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v1
+      with:
+        app-name: 'cmst488-dhaas2'
+         slot-name: 'production'
+        publish-profile: ${{ secrets.AppServiceCMST488 }}
