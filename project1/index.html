@@ -1,9 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+    <meta charset="utf-8">
+    <title>jQuery Selectors</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<p>Visible content goes here.</p>
+<body class="col-md-12">
+<h1>JS Exercise 1 - Basic jQuery Selectors and HTML Manipulation</h1>
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Basic Selectors (Adding Classes)</div>
+            <div class="panel-body">
+                <div id="display-resources">
+                    <p>jQuery examples using selectors to manipulate markup.</p>
+                    <ol class="selector-examples">
+                        <li>Add the class <em>"first"</em> to just me.</li>
+                        <li>Add the class <em>"even"</em> to the even numbers.</li>
+                        <li>Add the class <em>"odd"</em> to the odd numbers.</li>
+                        <li>Add the class <em>"highlighter"</em> to me and the next list item.</li>
+                        <li>I should have the class <em>"highlighter"</em> from the previous example.</li>
+                        <li>Add the class "last" to just me.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn btn-primary" id="add-classes">Add Classes</a>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Replacement Text</div>
+            <div class="panel-body">
+                <div id="programming-language">
+                    <h2><span class="currentLanguage">JavaScript</span> is my favorite programming language</h2>
+                    <p>I only ever realized <span class="currentLanguage">JavaScript</span> was my favorite language once I started building dynamic web applications.</p>
+                    <p>Change your favorite language to: <input type="text" id="newLanguage"></p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn btn-primary" id="change-language">Change Language</a>
+    </div>
+</div>
+<hr/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Toggles</div>
+            <div class="panel-body">
+                <div id="boxes">
+                    <!-- Step 1: Add the 'outlined' class to each of the boxes -->
+                    <div id="box1" class="box outlined"></div>
+                    <div id="box2" class="box outlined"></div>
+                    <div id="box3" class="box outlined"></div>
+                </div>
+
+                <div id="toggles">
+                    <h2>Toggles</h2>
+                    <button id="button_toggle_colors" class="btn btn-primary">Toggle Colors</button>
+                    <button id="button_toggle_roundedges" class="btn btn-primary">Toggle Rounded Borders</button>
+                    <button id="button_add_box" class="btn btn-primary">Add a New Box</button>
+                </div>
+
+                <div id="info">
+                    <h2>Descriptions:</h2>
+                    <ul>
+                        <li><b>Toggle Colors</b>: Toggles the color on and off for each box using CSS classes.</li>
+                        <li><b>Toggle Rounded Borders</b>: Toggles the color on and off for each box using CSS attributes.</li>
+                        <li><b>Add a New Box</b>: Adds one new box to the container.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="js/exercise1.js"></script>
 </body>
 </html>
