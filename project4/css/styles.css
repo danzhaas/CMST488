@@ -1,0 +1,40 @@
+body, header {
+    font-family: 'Montserrat', sans-serif;
+    width:100vw;
+}
+
+body {
+    min-height:100vh;
+    background: linear-gradient(rgb(255, 242, 172),rgb(255,255,255));
+}
+
+.navbar-brand, #brand {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-size:7vh;
+    padding: 5vh 0;
+}
+
+main {
+    padding: 0 2vw;
+}
+
+#chartContainer {
+    height:50vh;
+    border:1px solid black;
+}
+
+canvas {
+    height:50vh;
+    max-width:95vw;
+}
+
+#content h2 {
+    color: #6c63ff
+}
+
+.list-group-item.active {
+    background: #6c63ff;
+}
