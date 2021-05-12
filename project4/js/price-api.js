@@ -14,7 +14,3 @@ function getCoinPrice(coin, fieldId) {
 		$(fieldId).html(`\$${response[coin].usd}`);
 	});
 }
-getCoinPrice("bitcoin","#btc-price");
-getCoinPrice("ethereum","#eth-price");
-getCoinPrice("litecoin","#ltc-price");
-getCoinPrice("dogecoin","#doge-price");

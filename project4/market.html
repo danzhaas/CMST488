@@ -30,53 +30,46 @@
 
       <div class="row">
         <h2>Select Market MVP's</h2>
-        <!-- <div class="col col-md-6 col-lg-4"> -->
   
-          <div class="card col col-md-6 col-lg-3">
-            <!-- <div class="card-img-top" id="chartContainer" style="width:100%; height:300px;"></div> -->
+          <div class="card col col-md-6 col-lg-4">
             <div class="card-body">
-              <h2 id="btc-price" class="text-success">$400</h2>
+              <h2 id="btc-price" class="text-success"></h2>
               <h5 class="card-title"><i class="fas fa-coins"></i> Bitcoin</h5>
-              <!-- <p class="card-text">The grand daddy of them all.</p> -->
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="btn btn-primary" onclick="plotChart('bitcoin')">See Graph</a>
             </div>
           </div>
   
-          <div class="card col col-md-6 col-lg-3">
+          <div class="card col col-md-6 col-lg-4">
             <img class="card-img-top">
             <div class="card-body">
-              <h2 id="eth-price" class="text-success">$400</h2>
+              <h2 id="eth-price" class="text-success"></h2>
               <h5 class="card-title"><i class="fas fa-coins"></i> Ethereum</h5>
-              <!-- <p class="card-text">The grand daddy of them all.</p> -->
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="btn btn-primary" onclick="plotChart('ethereum')">See Graph</a>
             </div>
           </div>
   
-          <div class="card col col-md-6 col-lg-3">
+          <div class="card col col-md-6 col-lg-4">
             <img class="card-img-top">
             <div class="card-body">
-              <h2 id="ltc-price" class="text-success">$400</h2>
+              <h2 id="ltc-price" class="text-success"></h2>
               <h5 class="card-title"><i class="fas fa-coins"></i> Litecoin</h5>
-              <!-- <p class="card-text">The grand daddy of them all.</p> -->
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="btn btn-primary" onclick="plotChart('litecoin')">See Graph</a>
             </div>
           </div>
   
-          <div class="card col col-md-6 col-lg-3">
+          <div class="card col col-md-6 col-lg-4">
             <img class="card-img-top">
             <div class="card-body">
-              <h2 id="doge-price" class="text-success">$400</h2>
+              <h2 id="doge-price" class="text-success"></h2>
               <h5 class="card-title"><i class="fas fa-coins"></i> Dogecoin</h5>
-              <!-- <p class="card-text">The grand daddy of them all.</p> -->
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="btn btn-primary" onclick="plotChart('dogecoin')">See Graph</a>
             </div>
           </div>
   
-        <!-- </div> -->
       </div>
 
       <div class="row">
-        <div class="col">
+        <div class="col px-0">
           <h2>Today's Top 7 AltCoins on CoinGecko</h2>
           <div id="topCoins"></div>
         </div>
@@ -92,7 +85,7 @@
       crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script> 
     <script src="js/script.js"></script>
-    <script src="js/price-api.js"></script>
-    <script src="js/graph-api.js"></script>
+    <!-- <script src="js/price-api.js"></script> -->
+    <!-- <script src="js/graph-api.js"></script> -->
   </body>
 </html>

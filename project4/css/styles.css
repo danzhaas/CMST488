@@ -35,6 +35,12 @@ canvas {
     color: #6c63ff
 }
 
+#articles, #topCoins {
+    display:flex;
+    flex-wrap:wrap;
+    max-width:100%;
+}
+
 .list-group-item.active {
     background: #6c63ff;
 }
