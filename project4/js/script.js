@@ -47,8 +47,6 @@ if (document.title === "Coinboard - Market") {
       "url": `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=1&interval=minutely`,
       "method": "GET",
     };
-    // $("#chartContainer").fadeOut();
-    // setTimeout(() => console.log("tick, tock"), 500);
     $.ajax(settings)
     .done(function (response) {
       const p = response.prices;
@@ -62,11 +60,10 @@ if (document.title === "Coinboard - Market") {
         title: { text: nameCap},
         data: [{type: "line", dataPoints: marketChartData}]
       });
-      // $("#chartContainer").fadeIn();
     })
   }
 
-  plotChart("bitcoin")
+  plotChart("bitcoin");
 
   function getCoinPrice(coin, fieldId) {
     const settings = {
@@ -78,7 +75,7 @@ if (document.title === "Coinboard - Market") {
     $.ajax(settings).done(function (response) {
       $(fieldId).html(`\$${response[coin].usd}`);
     });
-  }
+  };
 
   function generateCoinCard(coinId) {
     return `
@@ -90,7 +87,7 @@ if (document.title === "Coinboard - Market") {
             </div>
         </div>
     `;
-  }
+  };
   
   getCoinPrice("bitcoin","#btc-price");
   getCoinPrice("ethereum","#eth-price");
@@ -118,7 +115,7 @@ if (document.title === "Coinboard - Market") {
         getCoinPrice(coin, fieldId);
       })
     });
-  }
+  };
   getTrendingCoins();
 }
 
@@ -127,6 +124,17 @@ if (document.title === "Coinboard - Guides") {
   $("#content").load("../content/how-to-buy-bitcoin.html")
   $("#buy-btc").click(() => $("#content").load("../content/how-to-buy-bitcoin.html"))
   $("#buy-doge").click(() => $("#content").load("../content/how-to-buy-dogecoin.html"))
+  $(".list-group-item").click(e => {
+    $(".active").removeClass("active");
+    $(e.target).addClass("active");
+  });
+}
+
+// Research
+if (document.title === "Coinboard - Research") {
+  $("#content").load("../content/what-is-blockchain.html")
+  $("#res-blockchain").click(() => $("#content").load("../content/what-is-blockchain.html"))
+  // $("#buy-doge").click(() => $("#content").load("../content/how-to-buy-dogecoin.html"))
   $(".list-group-item").click(e => {
     $(".active").removeClass("active");
     $(e.target).addClass("active");
